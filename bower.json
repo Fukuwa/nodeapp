@@ -1,0 +1,21 @@
+{
+  "name": "nodeapp",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Fukuwa <fjoriofi@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Fukuwa/nodeapp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}

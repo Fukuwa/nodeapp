@@ -6,9 +6,10 @@ var app = express();
 //var port = process.env.port;
 var port = 5000;
 
-// The public folder is the static folder
+// Static folder locations
 app.use(express.static('public'));
 app.use(express.static('src/views'));
+app.use(express.static('bower_components'));
 
 // Specifies request type
 app.get('/', function(req, res){

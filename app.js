@@ -6,6 +6,10 @@ var app = express();
 //var port = process.env.port;
 var port = 5000;
 
+// The public folder is the static folder
+app.use(express.static('public'));
+app.use(express.static('src/views'));
+
 // Specifies request type
 app.get('/', function(req, res){
     res.send('App message');

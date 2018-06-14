@@ -60,7 +60,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+
+          <% for(var i = 0; i < nav.length; i++) {%>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#<%= nav[i] %>"><%= nav[i] %></a>
+            </li>
+          <% } %>
+
+           <%#  <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
@@ -74,7 +81,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+            </li> %>
           </ul>
         </div>
       </div>
@@ -101,7 +108,7 @@
         <%}%>
     </ul>
 
-    <section id="services">
+    <section id="Services">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -139,7 +146,7 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <section class="bg-light" id="Portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -237,7 +244,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="About">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -318,7 +325,7 @@
     </section>
 
     <!-- Team -->
-    <section class="bg-light" id="team">
+    <section class="bg-light" id="Team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -437,7 +444,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="Contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">

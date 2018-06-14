@@ -17,9 +17,10 @@ app.set('view engine', 'ejs');
 // Specifies request type
 app.get('/', function(req, res){
     //res.send('App message');
-    res.render('index',
-    {list: ['1st val', '2nd val', '3rd val']}
-    );
+    res.render('index', {
+        list: ['1st val', '2nd val', '3rd val'],
+        nav: ['Services', 'Portfolio', 'About', 'Team', 'Contact']
+    });
 });
 
 // Routing

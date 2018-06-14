@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
+var nodemon = require('gulp-nodemon');
 
 
 // Looks for js files from project root and 'src' folder
@@ -10,6 +11,7 @@ gulp.task('style', function(){
         .pipe(jshint());
 });
 
+// Task can be run with 'gulp inject'
 gulp.task('inject', function(){
     var wiredep = require('wiredep').stream;
     var inject = require('gulp-inject');
@@ -33,4 +35,19 @@ gulp.task('inject', function(){
         .pipe(wiredep(options))
         .pipe(inject(injectSrc, injectOptions))
         .pipe(gulp.dest('./src/views'));
+});
+
+// Task can be run with 'gulp serve'
+// Array includes tasks to be run
+gulp.task('serve', ['style', 'inject'], function(){
+    // Run file, delay, changes to watch
+    var options = {
+        script: 'app.js',
+        delayTime: 1,
+        watch: jsFiles
+    }
+    return nodemon(options)
+        .on('restart', function(ev){
+            console.log('Restarting Server...');
+        });
 });

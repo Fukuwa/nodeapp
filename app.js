@@ -5,7 +5,10 @@ var app = express();
 // System specified port
 //var port = process.env.port;
 var port = 5000;
+
+// Route files locations
 var eventRouter = require('./src/routes/eventRoutes');
+var dbRouter = require('./src/routes/dbRoutes');
 
 // Static folder locations
 app.use(express.static('public'));
@@ -15,8 +18,9 @@ app.use(express.static('bower_components'));
 app.set('views', 'src/views');
 app.set('view engine', 'ejs');
 
-// States that the route is used
+// States that earlier defined the route is used
 app.use('/Events', eventRouter);
+app.use('/Db', dbRouter);
 
 // Specifies request type
 app.get('/', function(req, res){

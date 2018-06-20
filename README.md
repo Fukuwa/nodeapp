@@ -6,7 +6,7 @@ The app is part of a course project.
 ## Notes
 
 The app can be run with command
-gulp serve or npm start
+"gulp serve" or "npm start"
 
 Agency bootstrap theme is used, that can be accessed here:
 https://startbootstrap.com/template-overviews/agency/

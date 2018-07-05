@@ -1,7 +1,7 @@
 # nodeapp
 ノードアプリケーション
 
-The app is part of a course project.
+The app is the result of a course work.
 
 ## Notes
 

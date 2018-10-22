@@ -27,11 +27,11 @@ app.get('/', function(req, res){
     //res.send('App message');
     res.render('index', {
         list: ['1st val', '2nd val', '3rd val'],
-        nav: [{ Link: 'Services', Text: 'Services' },
-            { Link: 'Portfolio', Text: 'Portfolio' },
-            { Link: 'About', Text: 'About' },
-            { Link: 'Team', Text: 'Team' },
-            { Link: 'Contact', Text: 'Contact' },
+        nav: [{ Link: '#Services', Text: 'Services' },
+            { Link: '#Portfolio', Text: 'Portfolio' },
+            { Link: '#About', Text: 'About' },
+            { Link: '#Team', Text: 'Team' },
+            { Link: '#Contact', Text: 'Contact' },
             { Link: 'Events', Text: 'Events' }]
     });
 });

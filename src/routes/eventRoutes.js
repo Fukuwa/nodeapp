@@ -14,7 +14,7 @@ eventRouter.route('/')
         // Opens a connection to a database via URL
         var url = 'mongodb://localhost:27017';
         // Mongodb holds collection
-        mongodb.connect(url, function(err, client){
+        mongodb.connect(url, { useNewUrlParser: true }, function(err, client){
             var db = client.db('eventsApp');
             // Sends results back to page, so operation result is can be seen
             db.collection('events').find({}).toArray(function(err, results){
@@ -40,7 +40,7 @@ eventRouter.route('/:id')
         // Opens a connection to a database via URL
         var url = 'mongodb://localhost:27017';
         // Mongodb holds collection
-        mongodb.connect(url, function(err, client){
+        mongodb.connect(url, { useNewUrlParser: true }, function(err, client){
             var db = client.db('eventsApp');
             // Sends results back to page, so operation result is can be seen
             db.collection('events').find({}).toArray(function(err, results){

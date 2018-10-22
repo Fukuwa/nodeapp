@@ -61,9 +61,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
 
+          <!-- Navigation Links -->
+
           <% for(var i = 0; i < nav.length; i++) {%>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#<%= nav[i].Link %>"><%= nav[i].Text %></a>
+              <a class="nav-link js-scroll-trigger" href="<%= nav[i].Link %>"><%= nav[i].Text %></a>
             </li>
           <% } %>
 
